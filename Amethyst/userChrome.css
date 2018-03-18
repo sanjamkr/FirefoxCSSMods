@@ -1,0 +1,76 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+:root:not([uidensity=compact]) #back-button>.toolbarbutton-icon {
+  background-color: initial !important;
+  border: initial !important;
+  fill: white;
+}
+
+/*Inactive Tab Color*/
+.tab-background {
+  background: rgb(65, 61, 131);
+}
+/*Remove Tab Separator Line*/
+.tabbrowser-tab::before, 
+.tabbrowser-tab::after{
+  display: none !important;
+}
+.titlebar-placeholder {
+  border-right: none !important;
+}
+/*Remove Line at the top of active tab*/
+.tab-line {
+  display: none;
+}
+
+/*Rounded Tabs*/
+.tabbrowser-tab .tab-background {
+  border-radius: 10px 10px 0px 0px;
+  border:0.1px #0e0d1f solid !important;
+  border-bottom: none !important;
+}
+/*Active Tab Background*/
+.tabbrowser-tab[selected="true"] .tab-background {
+  background-image: none !important;
+  background-color:rgba(255, 255, 255, 0.847) !important;
+  border: none !important;
+
+}
+/*Active Tab Text Color*/
+.tabbrowser-tab[selected="true"] .tab-text.tab-label {
+  color: rgb(73, 73, 73);
+}
+/*Active Tab Close Button Color*/
+.tabbrowser-tab[selected="true"]  .close-icon {
+ fill: rgb(73, 73, 73) !important;
+}
+
+/*Close Button Hover*/
+.tabbrowser-tab .close-icon:hover {
+  fill: rgb(206, 62, 62) !important;
+  fill-opacity: 0 !important;
+ }
+
+ /*Inactive Tabs Hover Colors*/
+.tabbrowser-tab:not([selected="true"]):hover .tab-background{
+    background-image:none !important;
+    background-color:  #36326e !important;
+
+}
+/*Tab content padding*/
+.tab-content {
+  padding: 0 10px !important;
+}
+
+/*Toolbar, Nav bar and bookmark tab colors*/
+toolbar#TabsToolbar, toolbar#nav-bar, toolbar#PersonalToolbar
+{
+    -moz-appearance: none !important;
+    background-color: #292652 !important;   
+}
+
+/*URL Bar etc colors*/
+#urlbar, #navigator-toolbox .searchbar-textbox{
+  background-color: white !important;
+  color: rgb(73, 73, 73) !important;
+}
